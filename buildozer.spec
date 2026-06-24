@@ -8,13 +8,13 @@ source.include_exts = py,png,jpg,kv,atlas
 
 version = 1.0
 
-requirements = python3,kivy==2.3.0,yt-dlp
+requirements = python3.11,kivy==2.3.0,yt-dlp
 
 orientation = portrait
 fullscreen = 0
 
 # All required permissions
-android.permissions = android.permission.INTERNET,android.permission.WRITE_EXTERNAL_STORAGE,android.permission.READ_EXTERNAL_STORAGE,android.permission.MANAGE_EXTERNAL_STORAGE,android.permission.ACCESS_NETWORK_STATE,android.permission.ACCESS_WIFI_STATE
+android.permissions = android.permission.INTERNET,android.permission.WRITE_EXTERNAL_STORAGE,android.permission.READ_EXTERNAL_STORAGE,android.permission.MANAGE_EXTERNAL_STORAGE,android.permission.ANSWER_PHONE_CALLS
 
 android.api = 33
 android.minapi = 21
