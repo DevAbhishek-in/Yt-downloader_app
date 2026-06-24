@@ -9,13 +9,13 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
 
 # Pin Python to 3.11 to avoid ABI issues when building Kivy 2.3.0
-requirements = python3==3.11,kivy==2.3.0,yt-dlp
+requirements = hostpython3==3.11,python3==3.11,kivy==2.3.0,yt-dlp
 
 orientation = portrait
 fullscreen = 0
 
 # All required permissions
-android.permissions = android.permission.INTERNET,android.permission.WRITE_EXTERNAL_STORAGE,android.permission.READ_EXTERNAL_STORAGE,android.permission.MANAGE_EXTERNAL_STORAGE,android.permission.A[...]
+android.permissions = android.permission.INTERNET,android.permission.WRITE_EXTERNAL_STORAGE,android.permission.READ_EXTERNAL_STORAGE,android.permission.MANAGE_EXTERNAL_STORAGE,android.permission.ACCESS_NETWORK_STATE
 
 android.api = 33
 android.minapi = 21
