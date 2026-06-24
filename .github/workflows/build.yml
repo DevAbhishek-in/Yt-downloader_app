@@ -24,6 +24,14 @@ jobs:
         with:
           python-version: '3.11.15'
 
+      - name: Disable Microsoft package repos (workaround for 403/InRelease)
+        run: |
+          # Remove any packages.microsoft.com entries from apt sources to avoid apt-get update failing with 403/unsigned errors
+          sudo find /etc/apt/sources.list.d -type f -name "*.list" -exec sudo sed -i.bak '/packages.microsoft.com/d' {} \; || true
+          sudo sed -i.bak '/packages.microsoft.com/d' /etc/apt/sources.list || true
+          # show any remaining references (for debugging); this will exit 0 even if none found
+          sudo grep -R "packages.microsoft.com" /etc/apt || true
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
