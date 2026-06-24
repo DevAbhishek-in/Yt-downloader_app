@@ -8,7 +8,8 @@ source.include_exts = py,png,jpg,kv,atlas
 
 version = 1.0
 
-requirements = python3,kivy==2.3.0,yt-dlp
+# Pin Python to 3.11 to avoid ABI issues when building Kivy 2.3.0
+requirements = python3==3.11.15,kivy==2.3.0,yt-dlp
 
 orientation = portrait
 fullscreen = 0
